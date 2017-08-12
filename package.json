@@ -1,0 +1,31 @@
+{
+  "name": "habittracker",
+  "version": "0.0.1",
+  "description": "habit/goal tracker application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCFlores/habitTracker.git"
+  },
+  "keywords": [
+    "habit",
+    "goal",
+    "tracker"
+  ],
+  "author": "Jose, Alina, Patrick, Lexi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JCFlores/habitTracker/issues"
+  },
+  "homepage": "https://github.com/JCFlores/habitTracker#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mysql2": "^1.4.0",
+    "sequelize": "^4.4.3",
+    "sequelize-cli": "^2.8.0"
+  }
+}
