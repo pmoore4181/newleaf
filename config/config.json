@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "root",
+    "username": "guest",
     "password": null,
-    "database": "database_development",
+    "database": "habitTracker",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
+    "username": "guest",
     "password": null,
-    "database": "database_test",
+    "database": "habitTracker",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "guest",
     "password": null,
-    "database": "database_production",
+    "database": "habitTracker",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
