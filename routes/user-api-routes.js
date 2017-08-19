@@ -8,7 +8,6 @@ module.exports = function(app) {
         	where: {
         		user_name: req.body.user_name
         	}
-            include: [db.Goal]
         }).then(function(dbUser) {
             res.json(dbUser);
         });

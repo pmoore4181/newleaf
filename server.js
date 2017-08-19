@@ -4,8 +4,10 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
+var express = require("express"),
+	bodyParser = require("body-parser"),
+    methodOverride = require("method-override"),
+    exphbs = require("express-handlebars");
 
 // Sets up the Express App
 // =============================================================
@@ -20,6 +22,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Static directory
 app.use(express.static("public"));
@@ -27,6 +31,9 @@ app.use(express.static("public"));
 // Routes
 // // =============================================================
 require("./routes/html-routes.js")(app);
+require("./routes/goal-api-routes.js")(app);
+require("./routes/user-api-routes.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
