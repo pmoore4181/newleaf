@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     // Associating User with Goals
     // When an User is deleted, also delete any associated Goals
-    User.hasMany(models.goal, {
+    User.hasMany(models.Goal, {
       onDelete: "cascade"
     });
   };
