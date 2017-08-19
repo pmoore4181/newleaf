@@ -20,7 +20,7 @@
       <h1 class="subtitle">
         <strong>Make Goals | Track Habits | Win at Life </strong>
       </h1>
-      <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="logIn"><strong>Log In</strong></a></button>
+      <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="loginButton"><strong>Log In</strong></a></button>
     </div>
   </div>
 </section>
@@ -97,6 +97,7 @@
                 <button class="modal-close"></button>
             </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
 document.querySelector('#signUp').addEventListener('click', function(event) {
   event.preventDefault();
@@ -120,7 +121,10 @@ $(".modal-background").on("click", function() {
     $(".modal").removeClass("is-active");
 });
 $("#loginButton").on("click", function() {
-    $(".logIn").addClass("is-active");
+    $(".login").addClass("is-active");
+});
+$("#signUp").on("click", function() {
+    $(".signUp").addClass("is-active");
 });
 
 </script>
