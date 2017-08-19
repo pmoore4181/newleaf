@@ -7,6 +7,11 @@ font-family: 'Poiret One', cursive;
 background-color: #3b3936;
 }
 
+#leaf {
+	width: 80px;
+	height: 80px;
+}
+
 #signUp {
 margin-right: 5px;
 background-color: #00b154;
@@ -34,7 +39,6 @@ background-color: white;
 .rw-sentence{
 	margin: 0;
 	text-align: left;
-	/*text-shadow: 1px 1px 1px rgba(255,255,255,0.8);*/
 	color: white;
 }
 
