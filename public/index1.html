@@ -1,132 +1,165 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Habit Tracker</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-   <link rel="stylesheet" type="text/css" href="assets/css/app.css"/>
-   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 </head>
-<body>
-<section class="hero is-info is-medium" id="header">
-  <!-- Hero content: will be in the middle -->
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        Habit Tracker
-      </h1>
-      <h1 class="subtitle">
-        <strong>Make Goals | Track Habits | Win at Life </strong>
-      </h1>
-      <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="loginButton"><strong>Log In</strong></a></button>
-    </div>
-  </div>
-</section>
 
-<!-- Sign Up Modal -->
-            <div class="modal sign-up">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <!-- Sign Up Form -->
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <input class="nameInput input" type="text" placeholder="Name">
-                            <span class="icon is-small is-left">
-                              <i class="fa fa-user-circle"></i>
-                           </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <input class="emailInput input" type="email" placeholder="Email">
-                            <span class="icon is-small is-left">
-                              <i class="fa fa-envelope"></i>
-                           </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <input class="passwordInput input" type="password" placeholder="Password">
-                            <span class="icon is-small is-left">
-                              <i class="fa fa-lock"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control">
-                            <button class="button is-primary signUpSubmit">
-                                Sign Up
-                            </button>
-                        </p>
-                    </div>
-                </div>
-                <button class="modal-close"></button>
-            </div>
-            <!-- Login Modal -->
-            <div class="modal login">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <!-- Login Form -->
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <input class="emialInput input" type="email" placeholder="Email" id='modalEmail'>
-                            <span class="icon is-small is-left">
-                              <i class="fa fa-envelope"></i>
-                           </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <input class="passwordInput input" type="password" placeholder="Password" id='modalPassword'>
-                            <span class="icon is-small is-left">
-                              <i class="fa fa-lock"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control">
-                            <button class="button is-primary loginSubmit" id='modalLogin'>
-                                Login
-                            </button>
-                        </p>
-                    </div>
-                    <p class='white-font' id='loginErrorMessage'></p>
-                </div>
-                <button class="modal-close"></button>
+<body>
+    <section class="hero is-info is-medium" id="header">
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body rw-wrapper">
+            <div class="container has-text-centered">
+<h1 id="title">Habit Tracker</h1>
+<!-- <section class="rw-wrapper"> -->
+<div id="block">
+  <h1 class="rw-sentence">
+    <span>Make Goals to</span>
+    <div class="rw-words rw-words-1">
+      <span>exercise</span>
+      <span>read</span>
+      <span>organize your home</span>
+      <span>plan your day</span>
+      <span>meal prep</span>
+      <span>get more sleep</span>
+    </div>
+    <br />
+    <span>and</span>
+    <div class="rw-words rw-words-2">
+      <span>feel stronger</span>
+      <span>learn more</span>
+      <span>find things easier</span>
+      <span>save time</span>
+      <span>eat smarter</span>
+      <span>feel rested</span>
+    </div>
+  </h1>
+  </div>
+  <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="loginButton"><strong>Log In</strong></a></button>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-document.querySelector('#signUp').addEventListener('click', function(event) {
-  event.preventDefault();
-  var modal = document.querySelector('.modal');  // assuming you have only 1
-  var html = document.querySelector('html');
-  modal.classList.add('is-active');
-  html.classList.add('is-clipped');
+</section>
 
 
-  modal.querySelector('.modal-background').addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.classList.remove('is-active');
-    html.classList.remove('is-clipped');
-  });
-});
 
-$(".modal-close").on("click", function() {
-    $(".modal").removeClass("is-active");
-});
-$(".modal-background").on("click", function() {
-    $(".modal").removeClass("is-active");
-});
-$("#loginButton").on("click", function() {
-    $(".login").addClass("is-active");
-});
-$("#signUp").on("click", function() {
-    $(".signUp").addClass("is-active");
-});
+       <!--          <h1 class="title">
+        <strong>Habit Tracker</strong>
+      </h1>
+                <h1 class="subtitle">
+        <strong>Make Goals | Track Habits | Win at Life </strong>
+      </h1> -->
+       <!--          <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="loginButton"><strong>Log In</strong></a></button>
+            </div>
+        </div>
+    </section> -->
+    <!-- Sign Up Modal -->
+    <div class="modal sign-up">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <!-- Sign Up Form -->
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="nameInput input" type="text" placeholder="Name">
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-user-circle"></i>
+                           </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="emailInput input" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-envelope"></i>
+                           </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="passwordInput input" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-lock"></i>
+                            </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary signUpSubmit">
+                        Sign Up
+                    </button>
+                </p>
+            </div>
+        </div>
+        <button class="modal-close"></button>
+    </div>
+    <!-- Login Modal -->
+    <div class="modal login">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <!-- Login Form -->
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="emialInput input" type="email" placeholder="Email" id='modalEmail'>
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-envelope"></i>
+                           </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="passwordInput input" type="password" placeholder="Password" id='modalPassword'>
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-lock"></i>
+                            </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-primary loginSubmit" id='modalLogin'>
+                        Login
+                    </button>
+                </p>
+            </div>
+            <p class='white-font' id='loginErrorMessage'></p>
+        </div>
+        <button class="modal-close"></button>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    document.querySelector('#signUp').addEventListener('click', function(event) {
+        event.preventDefault();
+        var modal = document.querySelector('.modal'); // assuming you have only 1
+        var html = document.querySelector('html');
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped');
 
-</script>
+
+        modal.querySelector('.modal-background').addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.remove('is-active');
+            html.classList.remove('is-clipped');
+        });
+    });
+
+    $(".modal-close").on("click", function() {
+        $(".modal").removeClass("is-active");
+    });
+    $(".modal-background").on("click", function() {
+        $(".modal").removeClass("is-active");
+    });
+    $("#loginButton").on("click", function() {
+        $(".login").addClass("is-active");
+    });
+    $("#signUp").on("click", function() {
+        $(".signUp").addClass("is-active");
+    });
+    </script>
 </body>
+
 </html>
