@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    step_to_get_there: {
+    goal_name: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
