@@ -46,7 +46,7 @@ module.exports = function(sequelize, DataTypes) {
   Goal.associate = function(models) {
     // We're saying that a Goal should belong to an user
     // A Goal can't be created without an user due to the foreign key constraint
-    Goal.belongsTo(models.user, {
+    Goal.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
