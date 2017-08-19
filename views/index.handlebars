@@ -23,39 +23,41 @@
         </section>
         <div class="container">
             <div class="box">
+            <form method="POST" action="/goal/create" method="POST">
                 <div class="field">
                     <label class="label">Habit Discription</label>
                     <div class="control">
-                        <input class="input is-primary" type="text" placeholder="Read for one hour">
+                        <input class="input is-primary" type="text" name="goal_name" placeholder="Read for one hour">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">What days do you want to focus on?</label>
                     <label class="radio">
-                        <input type="radio" name="day1" value="Sunday"> Sunday
+                        <input type="radio" name="sunday" value="Sunday"> Sunday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="day2" value="Monday"> Monday
+                        <input type="radio" name="monday" value="Monday"> Monday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="day3" value="Tuesday"> Tuesday
+                        <input type="radio" name="tuesday" value="Tuesday"> Tuesday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="day4" value="Wednesday"> Wednesday
+                        <input type="radio" name="wednesday" value="Wednesday"> Wednesday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="day5" value="Thursday"> Thursday
+                        <input type="radio" name="thursday"> Thursday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="day6" value="Friday"> Friday
+                        <input type="radio" name="friday"> Friday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="day7" value="Saturday"> Saturday
+                        <input type="radio" name="saturday"> Saturday
                     </label>
                 </div>
                 <div class="control">
                     <button class="button is-primary">Submit</button>
                 </div>
+                </form>
             </div>
         </div>
     </section>
@@ -135,7 +137,7 @@
                 </div>
                 {{/if}}{{/each}}</div>
             </div>
-            
+
         </div>
     </section>
     <footer>
