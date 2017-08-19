@@ -26,8 +26,19 @@ module.exports = function(app) {
     });
 
     // post edited/updated goal to db
-    app.post('api/goal', function(req, res) {
-        db.Goal.create(req.body)
+    app.post('api/goal/create', function(req, res) {
+        db.Goal.create(
+        {
+            goal_name: req.body.goal_name,
+            monday: req.body.monday,
+            tuesday: req.body.tuesday,
+            wednesday: req.body.wednesday,
+            thursday: req.body.thursday,
+            friday: req.body.friday,
+            saturday: req.body.saturday,
+            sunday: req.body.sunday
+        })
+        }
         .then(function(newGoal) {
             res.json(newGoal)
         })
