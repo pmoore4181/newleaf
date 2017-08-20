@@ -1,28 +1,72 @@
 var db = require("../models");
 
+
+
 module.exports = function(app) {
 
 	// allow users to sign in to individual profile
-    app.get('/api/users', function(req, res) {
+    app.get('/allgoals', function(req, res) {
         db.User.findOne({
         	where: {
-        		user_name: req.body.userEmail
+        		user_name: req.body.user_name
         	}
         }).then(function(dbUser) {
-            res.render('goals', dbUser);
+            console.log(dbUser);
+
+            // var goalsObject = { 
+            //     user_name: dbUser.user_name 
+            // };
+            // return res.render("index", goalsObject);
+
         });
     })
 
 
+
+// // get route, edited to match sequelize
+// router.get("/burgers", function(req, res) {
+//   // replace old function with sequelize function
+//   db.Burger.findAll()
+//     // use promise method to pass the burgers...
+//     .then(function(dbBurger) {
+//       console.log(dbBurger);
+//       // into the main index, updating the page
+//       var hbsObject = { burger: dbBurger };
+//       return res.render("index", hbsObject);
+//     });
+// });
+
+
     // create new users
     // includes user_name, email, password
-    app.post("/api/users", function(req, res) {
+    app.post("/api/newuser", function(req, res) {
         db.User.create({
-        	email: req.body.newUserEmail,
-			user_name: req.body.newUserName,
-			password: req.body.newUserPassword
+            user_name: req.body.user_name,
+            email: req.body.email,
+            password: req.body.password
         })
-        .then(console.log(req))
+        .then(function(dbUser) {
+            console.log(dbUser);
+            //redirect to goals page
+            res.redirect('/goals');
+        });
     });
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Habit Track!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title is-size-1">
+        Track Your Habits
+      </h1>
+            <p class="subtitle is-size-4">
+                Do the things <strong>YOU</strong> want to do!
+            </p>
+        </div>
+    </section>
+    <section>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-size-4">
+                        Habits to achieve
+                    </h1>
+                    <h2 class="subtitle is-size-6">
+                        Fill out the form to start tracking your habits.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="box">
+                <div class="field">
+                    <label class="label">Habit Discription</label>
+                    <div class="control">
+                        <input class="input is-primary" id="newGoal" type="text" placeholder="Read for one hour">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">What days do you want to focus on?</label>
+                    <label class="radio">
+                        <input type="radio" name="day1" value="Sunday"> Sunday
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="day2" value="Monday"> Monday
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="day3" value="Tuesday"> Tuesday
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="day4" value="Wednesday"> Wednesday
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="day5" value="Thursday"> Thursday
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="day6" value="Friday"> Friday
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="day7" value="Saturday"> Saturday
+                    </label>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+        Have you accomplished your goals today?
+      </h1>
+                    <h2 class="subtitle">
+       Fill out the calendar to keep track of your progress
+      </h2>
+                </div>
+            </div>
+        </section>
+        <div class="columns">
+            <div class="column" id="Sunday">
+                <div class="box">Sunday</div>
+            </div>
+            <div class="column" id="Monday">
+                <div class="box"> Monday</div>
+            </div>
+            <div class="column" id="Tuesday">
+                <div class="box"> Tueday</div>
+            </div>
+            <div class="column" id="Wednesday">
+                <div class="box">Wednesday</div>
+            </div>
+            <div class="column" id="Thursday">
+                <div class="box">Thursday</div>
+            </div>
+            <div class="column" id="Friday">
+                <div class="box">Friday</div>
+            </div>
+            <div class="column" id="Saturday">
+                <div class="box">Saturday</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- add-goal.js -->
+    <script src="js/add-goal.js"></script>
+    <!-- show-goal.js -->
+    <script src="js/show-goals.js"></script>
+</body>
+
+</html>

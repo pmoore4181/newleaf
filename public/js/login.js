@@ -16,12 +16,12 @@ $(document).ready(function() {
 
     // create new user
     $(signUp).on("click", function() {
-        event.preventDefault();
+        console.log('submit pressed');
 
         // new user variables ==========
-        var newUserName = $("#newName").val();
-        var newUserEmail = $('#newEmail').val();
-        var newUserPassword = $('#newPassword').val();
+        var newUserName = $("#newUserName").val();
+        var newUserEmail = $('#newUserEmail').val();
+        var newUserPassword = $('#newUserPassword').val();
 
         var newUserInfo = {
             email: newUserEmail,
@@ -29,17 +29,16 @@ $(document).ready(function() {
             password: newUserPassword
         }
 
+        console.log(newUserInfo);
         addNewUser(newUserInfo);
+
+
     })
 
-
-
     // create new user
-    function addNewUser(newUserInfo) {
+    function addNewUser(info) {
 
-
-
-        $.post('/api/users', newUserInfo);
+        $.post('/api/newuser', info);
 
     }
 

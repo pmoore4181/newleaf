@@ -17,7 +17,11 @@ $(document).ready(function() {
 			.then(showAllGoals())
 	}
 
-
+	 //  // A function for creating an author. Calls getAuthors upon completion
+  // function upsertAuthor(authorData) {
+  //   $.post("/api/authors", authorData)
+  //     .then(getAuthors);
+  // }
 
 
 })
