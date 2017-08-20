@@ -4,45 +4,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Habit Track!</title>
+    <title>New Leaf: Goal Setter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="icon" href="assets/img/leaf.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/goals.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 </head>
 
 <body>
-    <section class="section">
+    <section class="section" id="header">
         <div class="container has-text-centered">
-            <h1 class="title is-size-1">
-        Track Your Habits
+            <h1 class="title">
+        <strong>What will you accomplish next?</strong>
       </h1>
-            <p class="subtitle is-size-4">
-                Do the things <strong>YOU</strong> want to do!
+            <p class="subtitle" id="started">
+                Let's Get Started.
             </p>
         </div>
     </section>
-    <section>
-        <section class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title is-size-4">
-                        Habits to achieve
-                    </h1>
-                    <h2 class="subtitle is-size-6">
-                        Fill out the form to start tracking your habits.
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <div class="container">
+    <section id="formBox">
+        <div class="container" id="goalForm">
             <div class="box">
                 <div class="field">
-                    <label class="label">Habit Discription</label>
+                    <label class="label" id="describe">Goal Description</label>
                     <div class="control">
-                        <input class="input is-primary" id="newGoal" type="text" placeholder="Read for one hour">
+                        <input class="input is-success" id="newGoal" type="text" placeholder="Read for one hour">
                     </div>
                 </div>
+                <br />
                 <div class="field">
-                    <label class="label">What days do you want to focus on?</label>
+                    <label class="placeholder" id="setDays"><strong>What days do you want to focus on?</strong></label>
+                    <br />
                     <label class="radio">
                         <input type="radio" name="day1" value="Sunday"> Sunday
                     </label>
@@ -65,14 +59,16 @@
                         <input type="radio" name="day7" value="Saturday"> Saturday
                     </label>
                 </div>
+                <br />
                 <div class="control">
-                    <button class="button is-primary" id="submitBtn">Submit</button>
+                    <button class="button is-success" id="submitBtn">Submit</button>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <section class="hero is-light">
+    <br />
+    <!--     <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
@@ -82,8 +78,8 @@
        Fill out the calendar to keep track of your progress
       </h2>
                 </div>
-            </div>
-        </section>
+            </div> -->
+        <!-- </section>
         <div class="columns">
             <div class="column" id="Sunday">
                 <div class="box">Sunday</div>
@@ -107,8 +103,92 @@
                 <div class="box">Saturday</div>
             </div>
         </div>
-    </section>
-    <footer>
+    </section> -->
+    <section>
+    <table>
+  <thead>
+    <tr>
+      <th class="calendar"></th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">1</span>
+        <span class="long" style="color: white; margin-left: 40px;">Sunday</span>
+        <span class="short">Sun</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">2</span>
+        <span class="long" style="color: white; margin-left: 40px;">Monday</span>
+        <span class="short">Mon</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">3</span>
+        <span class="long" style="color: white; margin-left: 40px;">Tuesday</span>
+        <span class="short">Tue</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">4</span>
+        <span class="long" style="color: white; margin-left: 40px;">Wednesday</span>
+        <span class="short">Wed</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">5</span>
+        <span class="long" style="color: white; margin-left: 40px;">Thursday</span>
+        <span class="short">Thur</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">6</span>
+        <span class="long" style="color: white; margin-left: 45px;">Friday</span>
+        <span class="short">Fri</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">7</span>
+        <span class="long" style="color: white; margin-left: 32px;">Saturday</span>
+        <span class="short">Sat</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="hour" rowspan="4"><span style="font-size: 25px; color: #3b3936; font-family: 'Poiret One', cursive;"><strong>Current Goals</strong></span>
+      </td>
+      <td class="userInput">Read for an hour</td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput">Read for an hour</td>
+      <td class="userInput"></td>
+      <td class="userInput">Do Laundry</td>
+      <td class="userInput"></td>
+    </tr>
+    <tr>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+    <tr>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+    <tr>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+  </tbody>
+</table>
+</section>
+    <footer id="footer">
     </footer>
 
     <!-- jquery cdn -->
@@ -118,5 +198,4 @@
     <!-- show-goal.js -->
     <script src="js/show-goals.js"></script>
 </body>
-
 </html>
