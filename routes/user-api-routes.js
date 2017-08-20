@@ -6,19 +6,23 @@ module.exports = function(app) {
     app.get('/api/users', function(req, res) {
         db.User.findOne({
         	where: {
-        		user_name: req.body.user_name
+        		user_name: req.body.userEmail
         	}
         }).then(function(dbUser) {
-            res.json(dbUser);
+            res.render('goals', dbUser);
         });
     })
+
 
     // create new users
     // includes user_name, email, password
     app.post("/api/users", function(req, res) {
-        db.User.create(req.body).then(function(dbUser) {
-            res.json(dbUser);
-        });
+        db.User.create({
+        	email: req.body.newUserEmail,
+			user_name: req.body.newUserName,
+			password: req.body.newUserPassword
+        })
+        .then(console.log(req))
     });
 
 };

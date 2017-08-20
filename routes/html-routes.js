@@ -14,13 +14,13 @@ module.exports = function(app) {
 
   // opens page with list of goals. Will be filled with info of each user's goals
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index1.html"));
   });
 
-  // send to login page
-  // login.html placeholder name, change when login page created
-  app.get('/login', function(req, res) {
-  	res.sendFile(path.join(__dirname, "../public/login.html"))
+
+  // send to personal page
+  app.get('/goals', function(req, res) {
+  	res.sendFile(path.join(__dirname, "../public/goals.html"))
   })
 
 };
