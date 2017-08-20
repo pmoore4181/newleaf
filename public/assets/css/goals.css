@@ -9,6 +9,11 @@ body {
     padding: 100px;
 }
 
+#leaf {
+	width: 90px;
+	height: 90px;
+}
+
 .title {
     color: #00b154;
     font-family: 'Poiret One', cursive;
