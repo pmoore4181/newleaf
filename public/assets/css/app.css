@@ -3,7 +3,6 @@ font-family: 'Poiret One', cursive;
 }
 
 #header {
-/*background-color: #3b3936;*/
 background-image: url("../img/shapes.png");
 }
 
@@ -88,6 +87,11 @@ font-size: 20px;
 background-color: white;
 }
 
+#foot {
+	background-image: url("../img/shapes.png");
+	padding: 50px;
+}
+
 .rw-sentence{
 	margin: 0;
 	text-align: left;
@@ -157,5 +161,3 @@ background-color: white;
     27% { opacity: 0; width: 100%; }
     100% { opacity: 0; }
 }
-
-
