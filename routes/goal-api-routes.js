@@ -22,8 +22,9 @@ module.exports = function(app) {
             }
         }).then(function(singleGoal) {
             res.json(singleGoal)
-        }
+        })
     });
+
 
     // post edited/updated goal to db
     app.post('api/goal/create', function(req, res) {
@@ -38,7 +39,6 @@ module.exports = function(app) {
             saturday: req.body.saturday,
             sunday: req.body.sunday
         })
-        }
         .then(function(newGoal) {
             res.json(newGoal)
         })
