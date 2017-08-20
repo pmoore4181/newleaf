@@ -1,10 +1,10 @@
 body {
-/*background-image: url("../img/triangle.png");*/
 font-family: 'Poiret One', cursive;
 }
 
 #header {
-background-color: #3b3936;
+/*background-color: #3b3936;*/
+background-image: url("../img/shapes.png");
 }
 
 #leaf {
@@ -15,10 +15,18 @@ background-color: #3b3936;
 #signUp {
 margin-right: 5px;
 background-color: #00b154;
+color: white;
+margin-top: 50px;
+padding: 20px;
+font-size: 20px;
 }
 
 #loginButton {
 background-color: #00b154;
+color: white;
+margin-top: 50px;
+padding: 20px;
+font-size: 20px;
 }
 
 #title {
@@ -27,13 +35,57 @@ background-color: #00b154;
 	color: white;
 }
 
-.subtitle {
-font-size: 25px;
+.notification {
+	color: black;
+	text-align: center;
+	font-size: 50px;
+}
+
+
+#goals {
+	font-size: 25px;
+	font-family: 'Cormorant Garamond', serif;
+
+}
+
+#track {
+	font-size: 25px;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+#win {
+	font-size: 25px;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+#green {
+	color: #00b154;
+}
+
+#bliss {
+	color: #00b154;
+}
+
+.checkIt {
+	color: #00b154;
+}
+
+#about {
+	text-align: center;
+	color: black;
+}
+
+.container {
+	background-color: #292725;
+	padding: 40px;
+}
+
+.container2 {
+	background-color: white;
 }
 
 .modal {
 background-color: white;
-
 }
 
 .rw-sentence{
