@@ -4,119 +4,185 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Habit Track!</title>
+    <title>New Leaf</title>
+    <link rel="icon" href="assets/img/leaf.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/a2d76425d0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 </head>
 
 <body>
-    <section class="section">
-        <div class="container has-text-centered">
-            <h1 class="title is-size-1">
-        Track Your Habits
-      </h1>
-            <p class="subtitle is-size-4">
-                Do the things <strong>YOU</strong> want to do!
-            </p>
-        </div>
-    </section>
-    <section>
-        <section class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title is-size-4">
-                        Habits to achieve
-                    </h1>
-                    <h2 class="subtitle is-size-6">
-                        Fill out the form to start tracking your habits.
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <div class="container">
-            <div class="box">
-                <div class="field">
-                    <label class="label">Habit Discription</label>
-                    <div class="control">
-                        <input class="input is-primary" id="newGoal" type="text" placeholder="Read for one hour">
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">What days do you want to focus on?</label>
-                    <label class="radio">
-                        <input type="radio" name="day1" value="Sunday"> Sunday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day2" value="Monday"> Monday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day3" value="Tuesday"> Tuesday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day4" value="Wednesday"> Wednesday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day5" value="Thursday"> Thursday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day6" value="Friday"> Friday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day7" value="Saturday"> Saturday
-                    </label>
-                </div>
-                <div class="control">
-                    <button class="button is-primary" id="submitBtn">Submit</button>
-                </div>
+    <section class="hero is-info is-medium" id="header">
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body rw-wrapper">
+            <div class="container has-text-centered">
+<h1 id="title"><span><img id="leaf" src="assets/img/leaf.png"></span><strong> New Leaf</strong></h1>
+<br />
+<!-- <section class="rw-wrapper"> -->
+<div id="block">
+  <h1 class="rw-sentence">
+    <span><strong>Make Goals to</strong></span>
+    <div class="rw-words rw-words-1">
+      <span><strong>Exercise</strong></span>
+      <span><strong>Read</strong></span>
+      <span><strong>Organize Your Home</strong></span>
+      <span><strong>Get More Sleep</strong></span>
+      <span><strong>Plan Your Day</strong></span>
+      <span><strong>Meal Prep</strong></span>
+      
+    </div>
+    <br />
+    <span><strong>and</strong></span>
+    <div class="rw-words rw-words-2">
+      <span><strong>Feel Stronger.</strong></span>
+      <span><strong>Gain Knowledge.</strong></span>
+      <span><strong>Find Things Easier.</strong></span>
+      <span><strong>Feel Rested.</strong></span>
+      <span><strong>Save Time.</strong></span>
+      <span><strong>Eat Smarter.</strong></span>
+    </div>
+  </h1>
+  </div>
+  <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="loginButton"><strong>Log In</strong></a></button>
             </div>
         </div>
-    </section>
-    <section>
-        <section class="hero is-light">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-        Have you accomplished your goals today?
-      </h1>
-                    <h2 class="subtitle">
-       Fill out the calendar to keep track of your progress
-      </h2>
-                </div>
-            </div>
-        </section>
-        <div class="columns">
-            <div class="column" id="Sunday">
-                <div class="box">Sunday</div>
-            </div>
-            <div class="column" id="Monday">
-                <div class="box"> Monday</div>
-            </div>
-            <div class="column" id="Tuesday">
-                <div class="box"> Tueday</div>
-            </div>
-            <div class="column" id="Wednesday">
-                <div class="box">Wednesday</div>
-            </div>
-            <div class="column" id="Thursday">
-                <div class="box">Thursday</div>
-            </div>
-            <div class="column" id="Friday">
-                <div class="box">Friday</div>
-            </div>
-            <div class="column" id="Saturday">
-                <div class="box">Saturday</div>
-            </div>
-        </div>
-    </section>
-    <footer>
-    </footer>
+  <div class="container2">
+  <div class="notification">
+    <h1><strong>Sometimes it's hard to stay on task</strong></h1>
+    <h5><strong>We can <span id="green">help</span>.</strong></h5>
+    <br />
+    <div class="columns">
+<!-- Figure out why font-awesome icons will not increase in size -->
+  <div class="column">
+  <a class="icon"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></a>
+    <h5 class="checkIt"><strong>Make Goals</strong></h5>
+    <hr>
+    <p id="goals">Need to catch more Zzzz's? Finish that book that's been collecting dust? We've got you covered.</p>
+  </div>
+  <div class="column">
+  <a class="icon"><i class="fa fa-line-chart fa-5x" aria-hidden="true"></i></a>
+    <h5 class="checkIt"><strong>Track Progress</strong></h5>
+    <hr>
+    <p id="track">Make goals for a single day or on the daily. The choice is yours. We'll track your progress so you can tell whether you're on track for the week.
+  </div>
+  <div class="column">
+  <a class="icon"><i class="fa fa-trophy fa-3x" aria-hidden="true"></i></a>
+    <h5 class="checkIt"><strong>Win at Life</strong></h5>
+    <hr>
+    <p id="win">Pretty soon, you won't have to ask yourself if you walked the dog or did the laundry. 
+    <br />
+    <span id="bliss"><strong>Bliss</strong></span>.</p>
+  </div>
+</div>
+  </div>
+</div>
 
-    <!-- jquery cdn -->
+    <!-- Sign Up Modal -->
+    <div class="modal sign-up">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <!-- Sign Up Form -->
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="nameInput input" type="text" placeholder="Name">
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-user-circle"></i>
+                           </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="emailInput input" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-envelope"></i>
+                           </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="passwordInput input" type="password" placeholder="Password">
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-lock"></i>
+                            </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success signUpSubmit">
+                        Sign Up
+                    </button>
+                </p>
+            </div>
+        </div>
+        <button class="modal-close"></button>
+    </div>
+    <!-- Login Modal -->
+    <div class="modal login">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <!-- Login Form -->
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="emialInput input" type="email" placeholder="Email" id='modalEmail'>
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-envelope"></i>
+                           </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="passwordInput input" type="password" placeholder="Password" id='modalPassword'>
+                    <span class="icon is-small is-left">
+                              <i class="fa fa-lock"></i>
+                            </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success loginSubmit" id='modalLogin'>
+                        Login
+                    </button>
+                </p>
+            </div>
+            <p class='white-font' id='loginErrorMessage'></p>
+        </div>
+        <button class="modal-close"></button>
+    </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- add-goal.js -->
-    <script src="js/add-goal.js"></script>
-    <!-- show-goal.js -->
-    <script src="js/show-goals.js"></script>
+    <script type="text/javascript">
+    document.querySelector('#signUp').addEventListener('click', function(event) {
+        event.preventDefault();
+        var modal = document.querySelector('.modal'); // assuming you have only 1
+        var html = document.querySelector('html');
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped');
+
+
+        modal.querySelector('.modal-background').addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.remove('is-active');
+            html.classList.remove('is-clipped');
+        });
+    });
+
+    $(".modal-close").on("click", function() {
+        $(".modal").removeClass("is-active");
+    });
+    $(".modal-background").on("click", function() {
+        $(".modal").removeClass("is-active");
+    });
+    $("#loginButton").on("click", function() {
+        $(".login").addClass("is-active");
+    });
+    $("#signUp").on("click", function() {
+        $(".signUp").addClass("is-active");
+    });
+    </script>
 </body>
 
 </html>
