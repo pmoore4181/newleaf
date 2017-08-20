@@ -29,5 +29,9 @@
     "mysql2": "^1.4.0",
     "sequelize": "^4.4.3",
     "sequelize-cli": "^2.8.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
   }
 }

@@ -11,6 +11,7 @@ $(document).ready(function() {
 		})
 	}
 
+
 	function addGoal (data) {
 		$.post('/api/goal', data)
 			.then(showAllGoals())
