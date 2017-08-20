@@ -35,6 +35,12 @@ body {
 #goalForm {
     margin-top: 60px;
     margin-bottom: 60px;
+    font-family: 'Cardo', serif;
+    font-size: 18px;
+}
+
+#describe {
+	font-size: 18px;
 }
 
 #formBox {
