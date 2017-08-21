@@ -18,7 +18,7 @@ module.exports = function(app) {
   });
 
   // send to goals page
-  app.get('/goals', function(req, res) {
+  app.get('/api/goals', function(req, res) {
   	res.sendFile(path.join(__dirname, "../public/goals.html"))
   })
 
