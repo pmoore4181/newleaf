@@ -25,6 +25,18 @@ module.exports = function(app) {
         })
     });
 
+    app.get('/allgoals/:id', function(req, res) {
+        db.Goal.findAll({
+            where: {
+                UserId: req.params.id
+            }
+        }).then(function(results){
+            console.log(results);
+            var newId = results.User.dataValues.id;
+            res.redirect('/api/goals');
+        })
+    })
+
 
     // post edited/updated goal to db
     app.post('/creategoal', function(req, res) {
