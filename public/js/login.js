@@ -4,13 +4,8 @@ $(document).ready(function() {
 
     // buttons =====================
     var login = $("#modalLogin");
-    var signUp = $('.signUpSubmit')
+    var signUp = $('.signUpSubmit');
 
-
-
-    // returning user variables ====
-    var userEmail = $("#modalEmail").val();
-    var userPassword = $('#modalPassword').val();
 
     // ADD NEW USER ================================================
 
@@ -27,7 +22,7 @@ $(document).ready(function() {
             email: newUserEmail,
             user_name: newUserName,
             password: newUserPassword
-        }
+        };
 
         console.log(newUserInfo);
         addNewUser(newUserInfo);
@@ -47,27 +42,41 @@ $(document).ready(function() {
 
     // login existing user
     $(login).on("click", function() {
-        event.preventDefault();
 
-        loginUser();
+        // returning user variables ====
+        var userEmail = $("#modalEmail").val();
+        var userPassword = $('#modalPassword').val();
 
-    })
+        var userInfo = {
+            email: userEmail,
+            password: userPassword
+        };
+
+        loginUser(userInfo);
+
+    });
 
 
     // function to run when user logs in
-    function loginUser() {
+    function loginUser(info) {
 
-        // Don't do anything if the name fields hasn't been filled out
-        if (!userEmail || !userPassword) {
-            return;
-        }
+        $.get('/user', info);
+        
 
-        $.get('/api/users', function(req, res) {
+    };
 
 
-        })
 
-    }
+
+
+
+
+
+
+
+
+
+
 
 
 });

@@ -1,13 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Goal = sequelize.define("Goal", {
 
-    goal_ID: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
     goal_name: {
       type: DataTypes.TEXT,
       allowNull: false,
