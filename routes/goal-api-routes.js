@@ -15,7 +15,7 @@ module.exports = function(app) {
     });
 
     // get info for individual goal and show on page so user can edit/update goal
-    app.get('api/goal', function(req, res) {
+    app.get('/api/goal', function(req, res) {
         db.Goal.findOne({
             where: {
                 goal_ID: req.body.goal_ID 
@@ -27,9 +27,8 @@ module.exports = function(app) {
 
 
     // post edited/updated goal to db
-    app.post('api/goal/create', function(req, res) {
-        db.Goal.create(
-        {
+    app.post('/creategoal', function(req, res) {
+        db.Goal.create({
             goal_name: req.body.goal_name,
             monday: req.body.monday,
             tuesday: req.body.tuesday,
@@ -40,8 +39,9 @@ module.exports = function(app) {
             sunday: req.body.sunday
         })
         .then(function(newGoal) {
-            res.json(newGoal)
+            console.log(newGoal);
         })
+        console.log(req.body);
     });
 
 };

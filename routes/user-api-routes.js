@@ -5,36 +5,32 @@ var db = require("../models");
 module.exports = function(app) {
 
 	// allow users to sign in to individual profile
-    app.get('/allgoals', function(req, res) {
-        db.User.findOne({
+    app.get('/user', function(req, res) {
+        db.Goal.findOne({
         	where: {
-        		user_name: req.body.user_name
+        		email: req.query.email
         	}
-        }).then(function(dbUser) {
+        })
+        .then(function(dbUser) {
             console.log(dbUser);
-
-            // var goalsObject = { 
-            //     user_name: dbUser.user_name 
-            // };
-            // return res.render("index", goalsObject);
+            // res.json(dbUser);
+            // redirect to goals page
+            // res.redirect('/usergoals/:id');
 
         });
+        console.log(req.query);
     })
 
-
-
-// // get route, edited to match sequelize
-// router.get("/burgers", function(req, res) {
-//   // replace old function with sequelize function
-//   db.Burger.findAll()
-//     // use promise method to pass the burgers...
-//     .then(function(dbBurger) {
-//       console.log(dbBurger);
-//       // into the main index, updating the page
-//       var hbsObject = { burger: dbBurger };
-//       return res.render("index", hbsObject);
-//     });
-// });
+    // get goals for user
+    app.get('/usergoals/:id', function(req, res){
+        db.Goal.findAll({
+            where: {
+                userID: req.params.id
+            }
+        }).then(function(results){
+            console.log(results)
+        })
+    })
 
 
     // create new users
