@@ -35,6 +35,7 @@ module.exports = function(app) {
 
     // create new users
     // includes user_name, email, password
+    app.get("/api")
     app.post("/api/newuser", function(req, res) {
         db.User.create({
             user_name: req.body.user_name,
@@ -44,7 +45,8 @@ module.exports = function(app) {
         .then(function(dbUser) {
             console.log(dbUser);
             //redirect to goals page
-            res.redirect('/goals');
+            var user = dbUser.id;
+            res.redirect('/api/goals');
         });
     });
 
