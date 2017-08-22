@@ -63,6 +63,7 @@ font-size: 20px;
 
 #bliss {
 	color: #00b154;
+	font-size: 30px;
 }
 
 .checkIt {
@@ -90,6 +91,42 @@ background-color: white;
 #foot {
 	background-image: url("../img/shapes.png");
 	padding: 50px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 240px;
+    height: 250px;
+    margin-left: 75px;
+    border: #00b154 solid 4px;
+    margin-top: 50px;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #00b154; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#footTitle {
+	font-size: 55px;
+	background-color: #292725;
+	text-align: center;
+	/*border: #00b154 solid 3px;*/
+	margin-bottom: 50px;
 }
 
 .rw-sentence{
