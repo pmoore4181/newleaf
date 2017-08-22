@@ -189,6 +189,10 @@ table tbody tr td.hour span {
     border-radius: 10px; /* Rounded corners */
 }
 
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
 .long {
   margin-left: 60px;
   margin-bottom: 10px;
