@@ -4,6 +4,8 @@ font-family: 'Poiret One', cursive;
 
 #header {
 background-image: url("../img/shapes.png");
+padding: 100px;
+/*margin-bottom: 50px;*/
 }
 
 #leaf {
@@ -39,6 +41,7 @@ font-size: 20px;
 	text-align: center;
 	font-size: 50px;
 	background-color: white;
+	margin: 50px;
 }
 
 #goals {
@@ -82,6 +85,8 @@ font-size: 20px;
 
 .container2 {
 	background-color: white;
+	margin-top: 125px;
+	margin-bottom: 125px;
 }
 
 .modal {
@@ -89,17 +94,28 @@ background-color: white;
 }
 
 #foot {
-	background-image: url("../img/shapes.png");
+	background-color: #292725;
 	padding: 50px;
+}
+
+#imgBox {
+	/*background-color: white;*/
+	padding: 10px;
+	margin-right: 10px;
 }
 
 .img-circle {
     border-radius: 50%;
-    width: 240px;
-    height: 250px;
-    margin-left: 75px;
+    width: 200px;
+    height: 210px;
+    margin-left: 65px;
     border: #00b154 solid 4px;
     margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#html {
+	background-color: #292725;
 }
 
 #myBtn {
@@ -125,8 +141,9 @@ background-color: white;
 	font-size: 55px;
 	background-color: #292725;
 	text-align: center;
-	/*border: #00b154 solid 3px;*/
-	margin-bottom: 50px;
+	border: #00b154 solid 3px;
+	margin-bottom: 10px;
+	margin-right: 2px;
 }
 
 .rw-sentence{
