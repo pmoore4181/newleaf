@@ -1,5 +1,3 @@
-@import 'lesshat';
-
 body {
     background-color: #5c5c5c;
 }
@@ -173,7 +171,7 @@ table tbody tr td.hour span {
 
 #footer {
 	background-image: url("../img/shapes.png");
-	padding: 50px;
+	padding: 100px;
 }
 
 #myBtn {
@@ -189,4 +187,96 @@ table tbody tr td.hour span {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
+}
+
+.long {
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+#forth {
+  background-color: #292725;
+  font-family: 'Poiret One', cursive;
+}
+
+#table {
+  padding: 50px;
+}
+
+#indent {
+  margin-left: 50px;
+}
+
+h1.rw-sentence {
+  text-indent: 170px;
+}
+
+.rw-sentence{
+  margin: 0;
+  text-align: left;
+  color: white;
+}
+
+
+.rw-sentence span{
+  color: white;
+  white-space: nowrap;
+  font-size: 350%;
+  font-weight: normal;
+}
+
+.rw-words{
+  display: inline;
+  text-indent: 16px;
+}
+
+.rw-words span{
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  color: #00b154;
+}
+
+.rw-words-1 span{
+  animation: rotateWordsFirst 18s linear infinite 0s;
+}
+.rw-words-2 span{
+  animation: rotateWordsSecond 18s linear infinite 0s;
+}
+.rw-words span:nth-child(2) { 
+  animation-delay: 3s; 
+  color: #00b154;
+}
+.rw-words span:nth-child(3) { 
+  animation-delay: 6s; 
+  color: #00b154; 
+}
+.rw-words span:nth-child(4) { 
+  animation-delay: 9s; 
+  color: #00b154;
+}
+.rw-words span:nth-child(5) { 
+  animation-delay: 12s; 
+  color: #00b154;
+}
+.rw-words span:nth-child(6) {  
+  animation-delay: 15s; 
+  color: #00b154;
+}
+
+@keyframes rotateWordsFirst {
+    0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+    8% { opacity: 1; height: 80px; }
+    19% { opacity: 1; height: 80px; }
+  25% { opacity: 0; height: 80px; }
+    100% { opacity: 0; }
+}
+
+@keyframes rotateWordsSecond {
+    0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
+    10% { opacity: 0.3; width: 0px; }
+  20% { opacity: 1; width: 100%; }
+    27% { opacity: 0; width: 100%; }
+    100% { opacity: 0; }
 }
