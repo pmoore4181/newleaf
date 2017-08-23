@@ -1,183 +1,193 @@
- <section class="section" id="header">
-        <div class="container has-text-centered">
-            <h1 class="title"><span><img id="leaf" src="/assets/img/leaf.png">
-        <strong>What will you accomplish next?</strong></span>
-      </h1>
-            <p class="subtitle" id="started">
-                Let's Get Started.
-            </p>
-        </div>
-    </section>
-    <section id="formBox">
-        <div class="container" id="goalForm">
-            <div class="box">
-                <div class="field">
-                    <label class="label" id="describe">Goal Description</label>
-                    <div class="control">
-                        <input class="input is-success" id="newGoal" type="text" placeholder="Read for one hour">
-                    </div>
-                </div>
-                <br />
-                <div class="field">
-                    <label class="placeholder" id="setDays"><strong>What days do you want to focus on?</strong></label>
-                    <br />
-                    <label class="radio">
-                        <input type="radio" name="day1" value="false" class="dayPick" id="sundayRadio"> Sunday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day2" value="false" class="dayPick" id="mondayRadio"> Monday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day3" value="false" class="dayPick" id="tuesdayRadio"> Tuesday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day4" value="false" class="dayPick" id="wednesdayRadio"> Wednesday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day5" value="false" class="dayPick" id="thursdayRadio"> Thursday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day6" value="false" class="dayPick" id="fridayRadio"> Friday
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="day7" value="false" class="dayPick" id="saturdayRadio"> Saturday
-                    </label>
-                </div>
-                <br />
-                <div class="control">
-                    <button class="button is-success" id="submitBtn">Submit</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-    <br />
-    <!--     <section class="hero is-light">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-        Have you accomplished your goals today?
-      </h1>
-                    <h2 class="subtitle">
-       Fill out the calendar to keep track of your progress
-      </h2>
-                </div>
-            </div> -->
-        <!-- </section>
-        <div class="columns">
-            <div class="column" id="Sunday">
-                <div class="box">Sunday</div>
-            </div>
-            <div class="column" id="Monday">
-                <div class="box"> Monday</div>
-            </div>
-            <div class="column" id="Tuesday">
-                <div class="box"> Tueday</div>
-            </div>
-            <div class="column" id="Wednesday">
-                <div class="box">Wednesday</div>
-            </div>
-            <div class="column" id="Thursday">
-                <div class="box">Thursday</div>
-            </div>
-            <div class="column" id="Friday">
-                <div class="box">Friday</div>
-            </div>
-            <div class="column" id="Saturday">
-                <div class="box">Saturday</div>
-            </div>
-        </div>
-    </section> -->
-    <section id="table">
-    <table>
-  <thead>
-    <tr>
-      <th class="calendar"></th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">20</span>
-        <span class="long" style="color: white; margin-left: 40px;">Sunday</span>
-        <span class="short">Sun</span>
-      </th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">21</span>
-        <span class="long" style="color: white; margin-left: 40px;">Monday</span>
-        <span class="short">Mon</span>
-      </th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">22</span>
-        <span class="long" style="color: white; margin-left: 40px;">Tuesday</span>
-        <span class="short">Tue</span>
-      </th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">23</span>
-        <span class="long" style="color: white; margin-left: 40px;">Wednesday</span>
-        <span class="short">Wed</span>
-      </th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">24</span>
-        <span class="long" style="color: white; margin-left: 40px;">Thursday</span>
-        <span class="short">Thur</span>
-      </th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">25</span>
-        <span class="long" style="color: white; margin-left: 45px;">Friday</span>
-        <span class="short">Fri</span>
-      </th>
-      <th class="calendar">
-        <span class="day" style="color: #00b154;">26</span>
-        <span class="long" style="color: white; margin-left: 32px;">Saturday</span>
-        <span class="short">Sat</span>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="hour" rowspan="4"><span style="font-size: 20px; color: #3b3936;""><strong>Current Goals</strong></span>
-      </td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-  </tbody>
-</table>
-</section>
-    <footer id="footer">
-    </footer>
 
-    <!-- jquery cdn -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- add-goal.js -->
-    <script src="js/add-goal.js"></script>
-    <!-- show-goal.js -->
-    <script src="js/show-goals.js"></script>
+     <section class="hero is-info" id="header">
+         <!-- Hero content: will be in the middle -->
+         <div class="hero-body rw-wrapper">
+             <div class="container has-text-centered">
+                 <h1 id="title"><span><img id="leaf" src="assets/img/leaf.png"></span><strong> New Leaf</strong></h1>
+                 <br />
+                 <!-- <section class="rw-wrapper"> -->
+                 <div id="block">
+                     <h1 class="rw-sentence">
+     <span><strong>Make Goals to</strong></span>
+     <div class="rw-words rw-words-1">
+       <span><strong>Exercise</strong></span>
+       <span><strong>Read</strong></span>
+       <span><strong>Organize Your Home</strong></span>
+       <span><strong>Get More Sleep</strong></span>
+       <span><strong>Plan Your Day</strong></span>
+       <span><strong>Meal Prep</strong></span>
+       
+     </div>
+     <br />
+     <span><strong>and</strong></span>
+     <div class="rw-words rw-words-2">
+       <span><strong>Feel Stronger.</strong></span>
+       <span><strong>Gain Knowledge.</strong></span>
+       <span><strong>Find Things Easier.</strong></span>
+       <span><strong>Feel Rested.</strong></span>
+       <span><strong>Save Time.</strong></span>
+       <span><strong>Eat Smarter.</strong></span>
+     </div>
+   </h1>
+                 </div>
+                 <span><a class="button is-dark" id="signUp"><strong>Sign up</strong></a></button></span><a class="button is-dark" id="loginButton"><strong>Log In</strong></a></button>
+             </div>
+         </div>
+         <div class="container2">
+             <div class="notification">
+                 <h1><strong>Sometimes it's hard to stay on task</strong></h1>
+                 <h5><strong>We can <span id="green">help</span>.</strong></h5>
+                 <br />
+                 <div class="columns">
+                     <div class="column">
+                         <a href="#"><i class="fa fa-pencil fa-3x" aria-hidden="true" style="font-size: 40px;"></i></a>
+                         <h5 class="checkIt"><strong>Make Goals</strong></h5>
+                         <hr>
+                         <p id="goals">Need to finish that book that's been collecting dust? Train for that 5k race? We've got you covered.</p>
+                     </div>
+                     <div class="column">
+                         <a href="#"><i class="fa fa-line-chart fa-5x" aria-hidden="true" style="font-size: 40px;"></i></a>
+                         <h5 class="checkIt"><strong>Track Progress</strong></h5>
+                         <hr>
+                         <p id="track">Make goals for a single day or on the daily- the choice is yours. All of your objectives are organized in one place.
+                     </div>
+                     <div class="column">
+                         <a href="#"><i class="fa fa-trophy fa-3x" aria-hidden="true" style="font-size: 40px;"></i></a>
+                         <h5 class="checkIt"><strong>Win at Life</strong></h5>
+                         <hr>
+                         <p id="win">Pretty soon, you won't have to ask yourself if you walked the dog or did the laundry. You'll have already done it.
+                             <br />
+                             <span id="bliss"><strong>Bliss</strong></span>.</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!-- Sign Up Modal -->
+         <div class="modal sign-up">
+             <div class="modal-background"></div>
+             <div class="modal-content">
+                 <!-- Sign Up Form -->
+                 <div class="field">
+                     <p class="control has-icons-left">
+                         <input class="nameInput input" type="text" placeholder="Name" id="newUserName">
+                         <span class="icon is-small is-left">
+                               <i class="fa fa-user-circle"></i>
+                            </span>
+                     </p>
+                 </div>
+                 <div class="field">
+                     <p class="control has-icons-left">
+                         <input class="emailInput input" type="email" placeholder="Email" id="newUserEmail">
+                         <span class="icon is-small is-left">
+                               <i class="fa fa-envelope"></i>
+                            </span>
+                     </p>
+                 </div>
+                 <div class="field">
+                     <p class="control has-icons-left">
+                         <input class="passwordInput input" type="password" placeholder="Password" id="newUserPassword">
+                         <span class="icon is-small is-left">
+                               <i class="fa fa-lock"></i>
+                             </span>
+                     </p>
+                 </div>
+                 <div class="field">
+                     <p class="control">
+                         <button class="button is-success signUpSubmit">
+                             Sign Up
+                         </button>
+                     </p>
+                 </div>
+             </div>
+             <button class="modal-close"></button>
+         </div>
+         <!-- Login Modal -->
+         <div class="modal login">
+             <div class="modal-background"></div>
+             <div class="modal-content">
+                 <!-- Login Form -->
+                 <div class="field">
+                     <p class="control has-icons-left">
+                         <input class="emialInput input" type="email" placeholder="Email" id='modalEmail'>
+                         <span class="icon is-small is-left">
+                               <i class="fa fa-envelope"></i>
+                            </span>
+                     </p>
+                 </div>
+                 <div class="field">
+                     <p class="control has-icons-left">
+                         <input class="passwordInput input" type="password" placeholder="Password" id='modalPassword'>
+                         <span class="icon is-small is-left">
+                               <i class="fa fa-lock"></i>
+                             </span>
+                     </p>
+                 </div>
+                 <div class="field">
+                     <p class="control">
+                         <button class="button is-success loginSubmit" id='modalLogin'>
+                             Login
+                         </button>
+                     </p>
+                 </div>
+                 <p class='white-font' id='loginErrorMessage'></p>
+             </div>
+             <button class="modal-close"></button>
+         </div>
+         </div>
+         <footer id="foot">
+             <h2 id="footTitle"><strong>Our Dynamic Team</strong></h2>
+         
+             <div id="imgBox">
+             <span><a href="https://github.com/pmoore4181" target="_blank"><img class="img-circle" src="assets/img/patrick.png" alt="Patrick"></a><a href="https://github.com/alinaschloesser" target="_blank"><img class="img-circle" src="assets/img/alina.png"></a><a href="https://github.com/lexluther2125" target="_blank"><img class="img-circle" src="assets/img/lexi.png"></a><a href="https://github.com/JCFlores" target="_blank"><img class="img-circle" src="assets/img/jose.png"></a></span>
+  </div>
+         </footer>
+         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script type="text/javascript">
+         document.querySelector('#signUp').addEventListener('click', function(event) {
+             event.preventDefault();
+             var modal = document.querySelector('.modal'); // assuming you have only 1
+             var html = document.querySelector('html');
+             modal.classList.add('is-active');
+             html.classList.add('is-clipped');
+
+
+
+             modal.querySelector('.modal-background').addEventListener('click', function(e) {
+                 e.preventDefault();
+                 modal.classList.remove('is-active');
+                 html.classList.remove('is-clipped');
+             });
+         });
+
+         $(".modal-close").on("click", function() {
+             $(".modal").removeClass("is-active");
+         });
+         $(".modal-background").on("click", function() {
+             $(".modal").removeClass("is-active");
+         });
+         $("#loginButton").on("click", function() {
+             $(".login").addClass("is-active");
+         });
+         $("#signUp").on("click", function() {
+             $(".signUp").addClass("is-active");
+         });
+
+         // When the user scrolls down 20px from the top of the document, show the button
+ window.onscroll = function() {scrollFunction()};
+
+ function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         document.getElementById("myBtn").style.display = "block";
+     } else {
+         document.getElementById("myBtn").style.display = "none";
+     }
+ }
+
+ // When the user clicks on the button, scroll to the top of the document
+ function topFunction() {
+     document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+     document.documentElement.scrollTop = 0; // For IE and Firefox
+ }
+         </script>
+         <script type="text/javascript" src='../js/login.js'></script>

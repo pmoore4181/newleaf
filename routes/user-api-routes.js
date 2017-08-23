@@ -15,11 +15,9 @@ module.exports = function(app) {
         .then(function(dbUser) {
             // return UserId and send to '/usergoals/:id'
             var signInId = dbUser.dataValues.id;
-            res.redirect('/usergoals/' + signInId);
-
+            res.json({redirect: '/api/goals/'});
         });
-
-    })
+    });
 
 
     // CREATE NEW USER =========================================

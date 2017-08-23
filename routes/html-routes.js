@@ -14,12 +14,12 @@ module.exports = function(app) {
 
   // send user to login page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    res.render("index");
   });
 
   // send to goals page
   app.get('/api/goals', function(req, res) {
-  	res.sendFile(path.join(__dirname, "../public/goals.html"))
-  })
+  	res.render("goals");
+  });
 
 };

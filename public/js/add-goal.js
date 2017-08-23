@@ -44,27 +44,15 @@ $(document).ready(function() {
 			friday: friGoal,
 			saturday: satGoal,
 			sunday: sunGoal
-		}
+		};
 
-		// addNewGoal(goalObj);
-
-		// $.ajax({
-		// 	method: 'POST',
-		// 	url: '/creategoal',
-		// 	data: goalObj
-		// })
 
 		$.post('/creategoal/' + userId , goalObj)
 
-	})
+	});
 
 	
 
 
 
-
-
-
-
-
-})
+});
