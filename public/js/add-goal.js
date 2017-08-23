@@ -32,21 +32,17 @@ $(document).ready(function() {
 			friday: friGoal,
 			saturday: satGoal,
 			sunday: sunGoal
-		}
+		};
 
 		addNewGoal(goalObj);
 
-	})
+	});
 
 	function addNewGoal(info) {
 
-		$.post('/creategoal', info)
+		$.post('/creategoal', info);
 
 	}
 
 
-
-
-
-
-})
+});
