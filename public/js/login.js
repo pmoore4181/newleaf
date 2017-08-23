@@ -72,7 +72,6 @@ $(document).ready(function() {
 
     });
 
-
     // function to run when user logs in
     function loginUser(info) {
         $.ajax({
@@ -86,17 +85,6 @@ $(document).ready(function() {
             }
         });
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
