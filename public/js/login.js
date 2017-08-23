@@ -2,6 +2,9 @@ $(document).ready(function() {
 
     // VARIABLES ===================================================
 
+    // url =========================
+    var currentURL = window.location.href;
+
     // buttons =====================
     var login = $("#modalLogin");
     var signUp = $('.signUpSubmit');
@@ -41,7 +44,7 @@ $(document).ready(function() {
             success: function(data, textStatus) {
                 if (data.redirect) {
                     // console.log(data.redirect);
-                    window.location.href = 'http://localhost:8000' + data.redirect;
+                    window.location.href = currentURL + data.redirect;
                 }
             }
 
