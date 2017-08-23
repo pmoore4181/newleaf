@@ -28,7 +28,7 @@ $(document).ready(function() {
         addNewUser(newUserInfo);
 
 
-    })
+    });
 
     // create new user
     function addNewUser(info) {
@@ -41,24 +41,24 @@ $(document).ready(function() {
             success: function(data, textStatus) {
                 if (data.redirect) {
                     // console.log(data.redirect);
-                    window.location.href = 'http://localhost:8000' + data.redirect
+                    window.location.href = 'http://localhost:8000' + data.redirect;
                 }
             }
-            
+
         });
     }
 
     // redirect to goals page
-    function loadGoals(info) {
-        $.get('/allgoals/:id', info )
-    }
+    // function loadGoals(info) {
+    //     $.get('/allgoals/:id', info );
+    // }
 
 
     // LOGIN =======================================================
 
     // login existing user
     $(login).on("click", function() {
-
+        // console.log('Welcome Back!');
         // returning user variables ====
         var userEmail = $("#modalEmail").val();
         var userPassword = $('#modalPassword').val();
@@ -75,11 +75,17 @@ $(document).ready(function() {
 
     // function to run when user logs in
     function loginUser(info) {
-
-        $.get('/user', info);
-        
-
-    };
+        $.ajax({
+            type: 'GET',
+            dataType: "json",
+            data: info,
+            url: '/user',
+            success: function(data){
+                console.log(data.redirect);
+                window.location.href = 'http://localhost:8000' + data.redirect;
+            }
+        });
+    }
 
 
 
