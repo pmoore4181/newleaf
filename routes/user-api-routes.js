@@ -15,14 +15,14 @@ module.exports = function(app) {
         .then(function(dbUser) {
             // return UserId and send to '/usergoals/:id'
             var signInId = dbUser.dataValues.id;
-            res.json({redirect: '/api/goals/$user_id=' + signInId});
+            res.json({redirect: '/api/goals/&user_id=' + signInId});
 
             db.User.findAll({
                 where: {
                     id: signInId
                 }
             }).then(function(results) {
-                console.log(results);
+                res.redirect('/api/goals/&user_id=' + signInId)
             })
         });
     });
