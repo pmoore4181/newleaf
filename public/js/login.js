@@ -48,10 +48,7 @@ $(document).ready(function() {
         });
     }
 
-    // redirect to goals page
-    // function loadGoals(info) {
-    //     $.get('/allgoals/:id', info );
-    // }
+   
 
 
     // LOGIN =======================================================

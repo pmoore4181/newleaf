@@ -68,42 +68,6 @@
     </section>
     <section>
         <br />
-        <!--     <section class="hero is-light">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-        Have you accomplished your goals today?
-      </h1>
-                    <h2 class="subtitle">
-       Fill out the calendar to keep track of your progress
-      </h2>
-                </div>
-            </div> -->
-        <!-- </section>
-        <div class="columns">
-            <div class="column" id="Sunday">
-                <div class="box">Sunday</div>
-            </div>
-            <div class="column" id="Monday">
-                <div class="box"> Monday</div>
-            </div>
-            <div class="column" id="Tuesday">
-                <div class="box"> Tueday</div>
-            </div>
-            <div class="column" id="Wednesday">
-                <div class="box">Wednesday</div>
-            </div>
-            <div class="column" id="Thursday">
-                <div class="box">Thursday</div>
-            </div>
-            <div class="column" id="Friday">
-                <div class="box">Friday</div>
-            </div>
-            <div class="column" id="Saturday">
-                <div class="box">Saturday</div>
-            </div>
-        </div>
-    </section> -->
         <section id="table">
             <table>
                 <thead>
@@ -151,54 +115,42 @@
                         <td class="hour" rowspan="4">
                             <span style="font-size: 20px; color: #3b3936;" "><strong>Current Goals</strong></span>
       </td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
+      <tr>
+        {{#each goal_data}}{{#if this.sunday}}
+      <td class="userInput">{{this.goal_name}} </td>
+        {{/if}}{{/each}}
+
     </tr>
     <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
+       {{#each goal_data}}{{#if this.monday}}
+       <td class="userInput"> {{this.goal_name}}</td>
     </tr>
     <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
+    {{#each goal_data}}{{#if this.tuesday}}
+      <td class="userInput">{{this.goal_name}}</td>
     </tr>
     <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
+      <td class="userInput "></td>
+      <td class="userInput "></td>
+      <td class="userInput "></td>
+      <td class="userInput "></td>
+      <td class="userInput "></td>
+      <td class="userInput "></td>
+      <td class="userInput "></td>
     </tr>
   </tbody>
 </table>
 </section>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true "></i></button>
-    <footer id="footer">
-                  <section class="hero is-info is-small" id="forth">
+<button onclick="topFunction() " id="myBtn " title="Go to top "><i class="fa fa-arrow-circle-up " aria-hidden="true "></i></button>
+    <footer id="footer ">
+                  <section class="hero is-info is-small " id="forth ">
         <!-- Hero content: will be in the middle -->
-        <div class=" rw-wrapper">
-            <div class="container has-text-centered">
-                  <div id="block">
-                    <h1 class="rw-sentence">
-    <span><strong id="indent"> Go Forth and</strong></span>
-    <div class="rw-words rw-words-2">
+        <div class=" rw-wrapper ">
+            <div class="container has-text-centered ">
+                  <div id="block ">
+                    <h1 class="rw-sentence ">
+    <span><strong id="indent "> Go Forth and</strong></span>
+    <div class="rw-words rw-words-2 ">
       <span><strong>Conquer.</strong></span>
       <span><strong>Create.</strong></span>
       <span><strong>Achieve.</strong></span>
@@ -209,15 +161,15 @@
                 </div>
     </footer>
 
-<script type="text/javascript">
+<script type="text/javascript ">
           // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction();};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("myBtn ").style.display = "block ";
     } else {
-        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("myBtn ").style.display = "none ";
     }
 }
 
