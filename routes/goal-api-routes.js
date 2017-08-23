@@ -5,23 +5,23 @@ module.exports = function(app) {
     //collect goals for user on sign-in
     app.get('/api/goals/&user_id=:id', function(req, res) {
 
+        // find all goals for user
         db.Goal.findAll({
             where: {
                 UserId: req.params.id
             }
         }).then(function(results){
+            // put all goals into an object
             var goalsObj = {
-                goals: results
+                goal: results
             };
-            console.log(results);
+            console.log(goalsObj.goal);
+            // send object to goals.handlebars
             return res.render("goals", goalsObj)
         })
 
         
     });
-
-
-
 
     // CREATE GOAL WITH USER IDg
     app.post('/creategoal/:id', function(req, res) {
@@ -39,9 +39,10 @@ module.exports = function(app) {
 
         })
         .then(function(newGoal) {
+            // redirect so goals show up on page as you add them
             res.redirect('/api/goals/&user_id=' + req.params.id)
         })
-        console.log(req.body);
+
     });
 
 

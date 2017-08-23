@@ -114,53 +114,50 @@
                 <tbody>
                     <tr>
                         <td class="hour" rowspan="4">
-                            <span style="font-size: 20px; color: #3b3936;" "><strong>Current Goals</strong></span>
+                            <span style="font-size: 20px; color: #3b3936;"><strong>Current Goals</strong></span>
       </td>
-    
 
-
-
-    {{#each goal_data}}
+    {{#each goal}}
       <tr>
-        <td>
-          {{if this.sunday}}
-            this.goal_name
+        <td id='sunRow'>
+          {{#if this.dataValues.sunday}}
+            {{this.dataValues.goal_name}}
           {{/if}}
         </td>
 
-        <td>
-          {{if this.monday}}
-            this.goal_name
+        <td id='monRow'>
+          {{#if this.dataValues.monday}}
+            {{this.goal_name}}
           {{/if}}
         </td>
 
-        <td>
-          {{if this.tuesday}}
-            this.goal_name
+        <td id='tueRow'>
+          {{#if this.dataValues.tuesday}}
+            {{this.goal_name}}
           {{/if}}          
         </td>
 
-        <td>
-          {{if this.wednesday}}
-            this.goal_name
+        <td id='wedRow'>
+          {{#if this.dataValues.wednesday}}
+            {{this.goal_name}}
           {{/if}}       
         </td>
 
-        <td>
-          {{if this.thursday}}
-            this.goal_name
+        <td id='thuRow'>
+          {{#if this.dataValues.thursday}}
+            {{this.goal_name}}
           {{/if}}         
         </td>
 
-        <td>
-          {{if this.friday}}
-            this.goal_name
+        <td id='friRow'>
+          {{#if this.dataValues.friday}}
+            {{this.goal_name}}
           {{/if}}        
         </td>
 
-        <td>
-          {{if this.saturday}}
-            this.goal_name
+        <td id='satRow'>
+          {{#if this.dataValues.saturday}}
+            {{this.goal_name}}
           {{/if}}      
         </td>
       </tr>
