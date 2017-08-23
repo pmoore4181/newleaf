@@ -33,8 +33,19 @@ $(document).ready(function() {
     // create new user
     function addNewUser(info) {
 
-        $.post('/api/newuser', info);
-
+        $.ajax({
+            url: '/api/newuser',
+            type: 'POST',
+            data: info,
+            dataType: 'json',
+            success: function(data, textStatus) {
+                if (data.redirect) {
+                    // console.log(data.redirect);
+                    window.location.href = 'http://localhost:8000' + data.redirect
+                }
+            }
+            
+        });
     }
 
     // redirect to goals page

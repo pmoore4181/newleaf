@@ -1,144 +1,183 @@
- <section class="section">
+ <section class="section" id="header">
         <div class="container has-text-centered">
-            <h1 class="title is-size-1">
-        Track Your Habits
+            <h1 class="title"><span><img id="leaf" src="/assets/img/leaf.png">
+        <strong>What will you accomplish next?</strong></span>
       </h1>
-            <p class="subtitle is-size-4">
-                Do the things <strong>YOU</strong> want to do!
+            <p class="subtitle" id="started">
+                Let's Get Started.
             </p>
         </div>
     </section>
-    <section>
-        <section class="hero is-primary">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title is-size-4">
-                        Habits to achieve
-                    </h1>
-                    <h2 class="subtitle is-size-6">
-                        Fill out the form to start tracking your habits.
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <div class="container">
+    <section id="formBox">
+        <div class="container" id="goalForm">
             <div class="box">
-            <form method="POST" action="/goal/create" method="POST">
                 <div class="field">
-                    <label class="label">Habit Discription</label>
+                    <label class="label" id="describe">Goal Description</label>
                     <div class="control">
-                        <input class="input is-primary" type="text" name="goal_name" placeholder="Read for one hour">
+                        <input class="input is-success" id="newGoal" type="text" placeholder="Read for one hour">
                     </div>
                 </div>
+                <br />
                 <div class="field">
-                    <label class="label">What days do you want to focus on?</label>
+                    <label class="placeholder" id="setDays"><strong>What days do you want to focus on?</strong></label>
+                    <br />
                     <label class="radio">
-                        <input type="radio" name="sunday" value="Sunday"> Sunday
+                        <input type="radio" name="day1" value="false" class="dayPick" id="sundayRadio"> Sunday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="monday" value="Monday"> Monday
+                        <input type="radio" name="day2" value="false" class="dayPick" id="mondayRadio"> Monday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="tuesday" value="Tuesday"> Tuesday
+                        <input type="radio" name="day3" value="false" class="dayPick" id="tuesdayRadio"> Tuesday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="wednesday" value="Wednesday"> Wednesday
+                        <input type="radio" name="day4" value="false" class="dayPick" id="wednesdayRadio"> Wednesday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="thursday"> Thursday
+                        <input type="radio" name="day5" value="false" class="dayPick" id="thursdayRadio"> Thursday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="friday"> Friday
+                        <input type="radio" name="day6" value="false" class="dayPick" id="fridayRadio"> Friday
                     </label>
                     <label class="radio">
-                        <input type="radio" name="saturday"> Saturday
+                        <input type="radio" name="day7" value="false" class="dayPick" id="saturdayRadio"> Saturday
                     </label>
                 </div>
+                <br />
                 <div class="control">
-                    <button class="button is-primary">Submit</button>
+                    <button class="button is-success" id="submitBtn">Submit</button>
                 </div>
-                </form>
             </div>
         </div>
     </section>
     <section>
-    <section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
+    <br />
+    <!--     <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
         Have you accomplished your goals today?
       </h1>
-      <h2 class="subtitle">
+                    <h2 class="subtitle">
        Fill out the calendar to keep track of your progress
       </h2>
-    </div>
-  </div>
-</section>
+                </div>
+            </div> -->
+        <!-- </section>
         <div class="columns">
             <div class="column" id="Sunday">
-                <div class="box">Sunday
-                {{#each goal_data}}{{#if this.sunday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}
-                </div>
+                <div class="box">Sunday</div>
             </div>
             <div class="column" id="Monday">
-                <div class="box"> Monday
-                   {{#each goal_data}}{{#if this.monday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}
-                </div>
+                <div class="box"> Monday</div>
             </div>
             <div class="column" id="Tuesday">
-                <div class="box"> Tueday
-                   {{#each goal_data}}{{#if this.tuesday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}
-                </div>
+                <div class="box"> Tueday</div>
             </div>
             <div class="column" id="Wednesday">
-                <div class="box">Wednesday
-                   {{#each goal_data}}{{#if this.wednesday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}
-                </div>
+                <div class="box">Wednesday</div>
             </div>
             <div class="column" id="Thursday">
-                <div class="box">Thursday
-                   {{#each goal_data}}{{#if this.thursday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}
-                </div>
+                <div class="box">Thursday</div>
             </div>
             <div class="column" id="Friday">
-                <div class="box">Friday
-                   {{#each goal_data}}{{#if this.friday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}
-                </div>
+                <div class="box">Friday</div>
             </div>
             <div class="column" id="Saturday">
-                <div class="box">Saturday
-                   {{#each goal_data}}{{#if this.saturday}}
-                <div> 
-                <pre>{{this.goal_name}}</pre>
-                </div>
-                {{/if}}{{/each}}</div>
+                <div class="box">Saturday</div>
             </div>
-
         </div>
-    </section>
-    <footer>
+    </section> -->
+    <section id="table">
+    <table>
+  <thead>
+    <tr>
+      <th class="calendar"></th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">20</span>
+        <span class="long" style="color: white; margin-left: 40px;">Sunday</span>
+        <span class="short">Sun</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">21</span>
+        <span class="long" style="color: white; margin-left: 40px;">Monday</span>
+        <span class="short">Mon</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">22</span>
+        <span class="long" style="color: white; margin-left: 40px;">Tuesday</span>
+        <span class="short">Tue</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">23</span>
+        <span class="long" style="color: white; margin-left: 40px;">Wednesday</span>
+        <span class="short">Wed</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">24</span>
+        <span class="long" style="color: white; margin-left: 40px;">Thursday</span>
+        <span class="short">Thur</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">25</span>
+        <span class="long" style="color: white; margin-left: 45px;">Friday</span>
+        <span class="short">Fri</span>
+      </th>
+      <th class="calendar">
+        <span class="day" style="color: #00b154;">26</span>
+        <span class="long" style="color: white; margin-left: 32px;">Saturday</span>
+        <span class="short">Sat</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="hour" rowspan="4"><span style="font-size: 20px; color: #3b3936;""><strong>Current Goals</strong></span>
+      </td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+    <tr>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+    <tr>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+    <tr>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+      <td class="userInput"></td>
+    </tr>
+  </tbody>
+</table>
+</section>
+    <footer id="footer">
     </footer>
+
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- add-goal.js -->
+    <script src="js/add-goal.js"></script>
+    <!-- show-goal.js -->
+    <script src="js/show-goals.js"></script>

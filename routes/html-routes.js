@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // send user to login page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
   });
 
   // send to goals page
