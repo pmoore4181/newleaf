@@ -18,8 +18,8 @@ module.exports = function(app) {
   });
 
   // send to goals page
-  app.get('/api/goals/:id', function(req, res) {
-  	res.render("goals");
-  });
+  // app.get('/api/goals/:id', function(req, res) {
+  // 	res.render("goals");
+  // });
 
 };
