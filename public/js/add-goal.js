@@ -86,7 +86,6 @@ $(document).ready(function() {
 
 	// ADD NEW GOAL ============================================
 	submitBtn.on("click", function(){
-		console.log('submit pressed');
 
 		// FORM INPUT =====================
 		var newGoal = $("#newGoal").val();
@@ -109,8 +108,7 @@ $(document).ready(function() {
 			sunday: sunGoal
 		};
 
-
-		$.post('/creategoal/' + userId , goalObj)
+			$.post('/creategoal/' + userId , goalObj)
 
 	});
 
