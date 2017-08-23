@@ -3,16 +3,49 @@ var db = require("../models");
 module.exports = function(app) {
 
     //collect goals for user on sign-in
-    app.get('/api/goal/:userid', function(req, res) {
-        db.Goal.findAll({
-            where: {
-                UserId: req.params.userid
-            },
-            include: [db.Goal]
-        }).then(function(results){
-            res.json(results);
-        })
+    // app.get('/api/goals/:userid', function(req, res) {
+    //     console.log('blahaaadsffdsksdfa');
+    //     db.Goal.findAll({
+    //         where: {
+    //             UserId: req.params.userid
+    //         }
+    //     }).then(function(results){
+    //         // res.json(results);
+    //         console.log(results);
+
+    //     })
+    // });
+
+
+    // GET route for getting all of the posts
+    app.get("/api/posts", function(req, res) {
+      var query = {};
+      if (req.query.author_id) {
+        query.AuthorId = req.query.author_id;
+      }
+      // Here we add an "include" property to our options in our findAll query
+      // We set the value to an array of the models we want to include in a left outer join
+      // In this case, just db.Author
+      db.Post.findAll({
+        where: query,
+        include: [db.Author]
+      }).then(function(dbPost) {
+        res.json(dbPost);
+      });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // get info for individual goal and show on page so user can edit/update goal
     app.get('/api/goal', function(req, res) {
@@ -38,8 +71,9 @@ module.exports = function(app) {
     })
 
 
-    // post edited/updated goal to db
-    app.post('/creategoal', function(req, res) {
+    // CREATE GOAL WITH USER IDg
+    app.post('/creategoal/:id', function(req, res) {
+        console.log(req.params.id , 'req.params.id')
         db.Goal.create({
             goal_name: req.body.goal_name,
             monday: req.body.monday,
@@ -48,12 +82,26 @@ module.exports = function(app) {
             thursday: req.body.thursday,
             friday: req.body.friday,
             saturday: req.body.saturday,
-            sunday: req.body.sunday
+            sunday: req.body.sunday,
+            UserId: req.params.id
+
         })
         .then(function(newGoal) {
             console.log(newGoal);
         })
         console.log(req.body);
     });
+
+
+
+
+
+
+
+
+
+
+
+
 
 };

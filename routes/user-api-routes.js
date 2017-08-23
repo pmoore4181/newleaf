@@ -30,26 +30,24 @@ module.exports = function(app) {
             password: req.body.password
         })
         .then(function(dbUser) {
-            // get id from dbUser and send to '/usergoals/:id'
+            // get id from dbUser
             var newUserId = dbUser.dataValues.id;
-            res.json({redirect: "/api/goals"});
 
-            // res.redirect('/usergoals/' + newUserId);
-        });
+            res.json({redirect: "/api/goals/&user_id=" + newUserId});
+
+            // once on goals.html, search for goals according to user id
+            db.User.findAll({
+                where: {
+                    id: newUserId
+                }
+            }).then(function(results) {
+                console.log(results);
+            })
+
+        })
     });
 
 
-    // get goals for user 
-    app.get('/usergoals/:id', function(req, res){
-        db.Goal.findAll({
-            // take UserId sent and search Goal db for all goals with that UserId
-            where: {
-                userID: req.params.id
-            }
-        }).then(function(results){
-            console.log(results);
-        })
-    })
 
 };
 
