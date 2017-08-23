@@ -116,43 +116,69 @@
                         <td class="hour" rowspan="4">
                             <span style="font-size: 20px; color: #3b3936;" "><strong>Current Goals</strong></span>
       </td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
+    
+
+
+
+    {{#each goal_data}}
+      <tr>
+        <td>
+          {{if this.sunday}}
+            this.goal_name
+          {{/if}}
+        </td>
+
+        <td>
+          {{if this.monday}}
+            this.goal_name
+          {{/if}}
+        </td>
+
+        <td>
+          {{if this.tuesday}}
+            this.goal_name
+          {{/if}}          
+        </td>
+
+        <td>
+          {{if this.wednesday}}
+            this.goal_name
+          {{/if}}       
+        </td>
+
+        <td>
+          {{if this.thursday}}
+            this.goal_name
+          {{/if}}         
+        </td>
+
+        <td>
+          {{if this.friday}}
+            this.goal_name
+          {{/if}}        
+        </td>
+
+        <td>
+          {{if this.saturday}}
+            this.goal_name
+          {{/if}}      
+        </td>
+      </tr>
+    {{/each}}
+
+
   </tbody>
 </table>
+
+<table>
+  <tr>
+    <th>Sunday 19</th>
+  </tr>
+  <tr>
+  <td class="userInput"></td>
+  </tr>
+</table>
+
 </section>
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true "></i></button>
     <footer id="footer">
