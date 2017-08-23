@@ -34,7 +34,9 @@ module.exports = function(app) {
         .then(function(dbUser) {
             // get id from dbUser and send to '/usergoals/:id'
             var newUserId = dbUser.dataValues.id;
-            res.redirect('/usergoals/' + newUserId);
+            res.json({redirect: "/api/goals"});
+
+            // res.redirect('/usergoals/' + newUserId);
         });
     });
 
