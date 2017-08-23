@@ -13,18 +13,9 @@ module.exports = function(app) {
             }
         })
         .then(function(dbUser) {
-            // return UserId and send to '/usergoals/:id'
+            // return UserId and send to '/api/goals/&user_id=:id'
             var signInId = dbUser.dataValues.id;
             res.json({redirect: '/api/goals/&user_id=' + signInId})
-
-            // db.User.findOne({
-            //     where: {
-            //         id: signInId
-            //     }
-            // })
-            // .then(function(results) {
-            //     res.redirect('/api/goals/&user_id=' + signInId)
-            // })
         });
     });
 
