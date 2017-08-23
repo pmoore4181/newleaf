@@ -108,7 +108,8 @@ $(document).ready(function() {
 			sunday: sunGoal
 		};
 
-			$.post('/creategoal/' + userId , goalObj)
+			$.post('/creategoal/' + userId , goalObj);
+			location.reload();
 
 	});
 

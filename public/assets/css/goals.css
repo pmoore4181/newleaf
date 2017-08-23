@@ -92,7 +92,7 @@ table tbody tr {
 table tbody tr:nth-child(odd) {
   background: #bababa;
 }
-table tbody tr:nth-child(4n + 0) td {
+table tbody tr:nth-child(8n + 0) td {
   border-bottom: 1px solid #5c5c5c;
 }
 table tbody tr td {
