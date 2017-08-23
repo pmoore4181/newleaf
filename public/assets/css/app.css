@@ -104,6 +104,44 @@ background-color: white;
 	margin-right: 10px;
 }
 
+/*.imgContainer {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+   width: 200px;
+    height: 210px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 .img-circle {
     border-radius: 50%;
     width: 200px;
@@ -114,8 +152,12 @@ background-color: white;
     margin-bottom: 10px;
 }
 
-#html {
-	background-color: #292725;
+.class {
+	width: 200px;
+    height: 210px;
+    margin-left: 65px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 #myBtn {
