@@ -25,7 +25,7 @@ module.exports = function(app) {
 
     // CREATE GOAL WITH USER IDg
     app.post('/creategoal/:id', function(req, res) {
-        console.log(req.params.id , 'req.params.id')
+        console.log(req.params.id+ ': req.params.id');
         db.Goal.create({
             goal_name: req.body.goal_name,
             monday: req.body.monday,
@@ -40,7 +40,7 @@ module.exports = function(app) {
         })
         .then(function(newGoal) {
             // redirect so goals show up on page as you add them
-            res.redirect('/api/goals/&user_id=' + req.params.id)
+            res.redirect('/api/goals/&user_id=:' + req.params.id)
         })
 
     });
