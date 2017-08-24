@@ -17,6 +17,8 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  
+
   // send to goals page
   // app.get('/api/goals/:id', function(req, res) {
   // 	res.render("goals");
