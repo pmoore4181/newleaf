@@ -2,6 +2,10 @@ $(document).ready(function() {
 
     // VARIABLES ===================================================
 
+    // url =========================
+    var currentURL = window.location.href;
+    var usableURL = currentURL.slice(0, -1);
+
     // buttons =====================
     var login = $("#modalLogin");
     var signUp = $('.signUpSubmit');
@@ -41,17 +45,14 @@ $(document).ready(function() {
             success: function(data, textStatus) {
                 if (data.redirect) {
                     // console.log(data.redirect);
-                    window.location.href = 'http://localhost:8000' + data.redirect;
+                    window.location.href = usableURL + data.redirect;
                 }
             }
 
         });
     }
 
-    // redirect to goals page
-    // function loadGoals(info) {
-    //     $.get('/allgoals/:id', info );
-    // }
+   
 
 
     // LOGIN =======================================================
@@ -72,7 +73,6 @@ $(document).ready(function() {
 
     });
 
-
     // function to run when user logs in
     function loginUser(info) {
         $.ajax({
@@ -82,21 +82,10 @@ $(document).ready(function() {
             url: '/user',
             success: function(data){
                 console.log(data.redirect);
-                window.location.href = 'http://localhost:8000' + data.redirect;
+                window.location.href = usableURL + data.redirect;
             }
         });
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

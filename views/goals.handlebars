@@ -7,8 +7,8 @@
     <title>New Leaf: Goal Setter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-    <link rel="icon" href="assets/img/leaf.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/goals.css" />
+    <link rel="icon" href="/assets/img/leaf.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/goals.css" />
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 </head>
@@ -16,7 +16,7 @@
 <body>
     <section class="section" id="header">
         <div class="container has-text-centered">
-            <h1 class="title"><span><img id="leaf" src="assets/img/leaf.png">
+            <h1 class="title"><span><img id="leaf" src="/assets/img/leaf.png">
         <strong>What will you accomplish next?</strong></span>
       </h1>
             <p class="subtitle" id="started">
@@ -37,26 +37,26 @@
                 <div class="field">
                     <label class="placeholder" id="setDays"><strong>What days do you want to focus on?</strong></label>
                     <br />
-                    <label class="radio">
-                        <input type="radio" name="day1" value="false" class="dayPick" id="sundayRadio"> Sunday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day1" value="false" class="dayPick" id="sundaycheckbox"> Sunday
                     </label>
-                    <label class="radio">
-                        <input type="radio" name="day2" value="false" class="dayPick" id="mondayRadio"> Monday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day2" value="false" class="dayPick" id="mondaycheckbox"> Monday
                     </label>
-                    <label class="radio">
-                        <input type="radio" name="day3" value="false" class="dayPick" id="tuesdayRadio"> Tuesday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day3" value="false" class="dayPick" id="tuesdaycheckbox"> Tuesday
                     </label>
-                    <label class="radio">
-                        <input type="radio" name="day4" value="false" class="dayPick" id="wednesdayRadio"> Wednesday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day4" value="false" class="dayPick" id="wednesdaycheckbox"> Wednesday
                     </label>
-                    <label class="radio">
-                        <input type="radio" name="day5" value="false" class="dayPick" id="thursdayRadio"> Thursday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day5" value="false" class="dayPick" id="thursdaycheckbox"> Thursday
                     </label>
-                    <label class="radio">
-                        <input type="radio" name="day6" value="false" class="dayPick" id="fridayRadio"> Friday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day6" value="false" class="dayPick" id="fridaycheckbox"> Friday
                     </label>
-                    <label class="radio">
-                        <input type="radio" name="day7" value="false" class="dayPick" id="saturdayRadio"> Saturday
+                    <label class="checkbox">
+                        <input type="checkbox" name="day7" value="false" class="dayPick" id="saturdaycheckbox"> Saturday
                     </label>
                 </div>
                 <br />
@@ -68,42 +68,7 @@
     </section>
     <section>
         <br />
-        <!--     <section class="hero is-light">
-            <div class="hero-body">
-                <div class="container">
-                    <h1 class="title">
-        Have you accomplished your goals today?
-      </h1>
-                    <h2 class="subtitle">
-       Fill out the calendar to keep track of your progress
-      </h2>
-                </div>
-            </div> -->
-        <!-- </section>
-        <div class="columns">
-            <div class="column" id="Sunday">
-                <div class="box">Sunday</div>
-            </div>
-            <div class="column" id="Monday">
-                <div class="box"> Monday</div>
-            </div>
-            <div class="column" id="Tuesday">
-                <div class="box"> Tueday</div>
-            </div>
-            <div class="column" id="Wednesday">
-                <div class="box">Wednesday</div>
-            </div>
-            <div class="column" id="Thursday">
-                <div class="box">Thursday</div>
-            </div>
-            <div class="column" id="Friday">
-                <div class="box">Friday</div>
-            </div>
-            <div class="column" id="Saturday">
-                <div class="box">Saturday</div>
-            </div>
-        </div>
-    </section> -->
+      
         <section id="table">
             <table>
                 <thead>
@@ -148,46 +113,60 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="hour" rowspan="4">
-                            <span style="font-size: 20px; color: #3b3936;" "><strong>Current Goals</strong></span>
+                        <td class="hour" rowspan="8">
+                            <span style="font-size: 20px; color: #3b3936;"><strong>Current Goals</strong></span>
       </td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
-    <tr>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-      <td class="userInput"></td>
-    </tr>
+
+    {{#each goal}}
+      <tr>
+        <td id='sunRow'>
+          {{#if this.dataValues.sunday}}
+            {{this.dataValues.goal_name}}
+          {{/if}}
+        </td>
+
+        <td id='monRow'>
+          {{#if this.dataValues.monday}}
+            {{this.goal_name}}
+          {{/if}}
+        </td>
+
+        <td id='tueRow'>
+          {{#if this.dataValues.tuesday}}
+            {{this.goal_name}}
+          {{/if}}          
+        </td>
+
+        <td id='wedRow'>
+          {{#if this.dataValues.wednesday}}
+            {{this.goal_name}}
+          {{/if}}       
+        </td>
+
+        <td id='thuRow'>
+          {{#if this.dataValues.thursday}}
+            {{this.goal_name}}
+          {{/if}}         
+        </td>
+
+        <td id='friRow'>
+          {{#if this.dataValues.friday}}
+            {{this.goal_name}}
+          {{/if}}        
+        </td>
+
+        <td id='satRow'>
+          {{#if this.dataValues.saturday}}
+            {{this.goal_name}}
+          {{/if}}      
+        </td>
+      </tr>
+    {{/each}}
+
+
   </tbody>
 </table>
+
 </section>
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true "></i></button>
     <footer id="footer">
@@ -230,8 +209,8 @@ function topFunction() {
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
     <!-- add-goal.js -->
-    <script src="js/add-goal.js "></script>
+    <script src="../../js/add-goal.js "></script>
     <!-- show-goal.js -->
-    <script src="js/show-goals.js "></script>
+    <script src="../../js/show-goals.js "></script>
 </body>
 </html>

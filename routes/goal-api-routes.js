@@ -3,43 +3,29 @@ var db = require("../models");
 module.exports = function(app) {
 
     //collect goals for user on sign-in
-    app.get('/api/goal/:userid', function(req, res) {
-        db.Goal.findAll({
-            where: {
-                UserId: req.params.userid
-            },
-            include: [db.Goal]
-        }).then(function(results){
-            res.json(results);
-        })
-    });
+    app.get('/api/goals/&user_id=:id', function(req, res) {
 
-    // get info for individual goal and show on page so user can edit/update goal
-    app.get('/api/goal', function(req, res) {
-        db.Goal.findOne({
-            where: {
-                goal_ID: req.body.goal_ID 
-            }
-        }).then(function(singleGoal) {
-            res.json(singleGoal)
-        })
-    });
-
-    app.get('/allgoals/:id', function(req, res) {
+        // find all goals for user
         db.Goal.findAll({
             where: {
                 UserId: req.params.id
             }
         }).then(function(results){
-            console.log(results);
-            var newId = results.User.dataValues.id;
-            res.redirect('/api/goals');
+            // put all goals into an object
+            var goalsObj = {
+                goal: results
+            };
+            console.log(goalsObj.goal);
+            // send object to goals.handlebars
+            return res.render("goals", goalsObj)
         })
-    })
 
+        
+    });
 
-    // post edited/updated goal to db
-    app.post('/creategoal', function(req, res) {
+    // CREATE GOAL WITH USER IDg
+    app.post('/creategoal/:id', function(req, res) {
+        console.log(req.params.id+ ': req.params.id');
         db.Goal.create({
             goal_name: req.body.goal_name,
             monday: req.body.monday,
@@ -48,12 +34,27 @@ module.exports = function(app) {
             thursday: req.body.thursday,
             friday: req.body.friday,
             saturday: req.body.saturday,
-            sunday: req.body.sunday
+            sunday: req.body.sunday,
+            UserId: req.params.id
+
         })
         .then(function(newGoal) {
-            console.log(newGoal);
+            // redirect so goals show up on page as you add them
+            res.redirect('/api/goals/&user_id=:' + req.params.id)
         })
-        console.log(req.body);
+
     });
+
+
+
+
+
+
+
+
+
+
+
+
 
 };
