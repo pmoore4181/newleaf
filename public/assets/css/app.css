@@ -188,6 +188,10 @@ background-color: white;
 	margin-right: 2px;
 }
 
+h1.rw-sentence {
+	text-align: left;
+}
+
 .rw-sentence{
 	margin: 0;
 	text-align: left;
