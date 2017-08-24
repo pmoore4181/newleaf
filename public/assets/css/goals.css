@@ -65,16 +65,21 @@ table thead tr th:first-child {
 table thead tr th:last-child {
   border-radius: 0 3px 0 0;
 }
-table thead tr th .day {
+table thead tr th .day .long{
   display: block;
   font-size: 1.2em;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin: 0 auto 5px;
+  /*margin: 0 auto;*/
   padding: 5px;
   line-height: 1.8;
 }
+
+/*.long{
+  padding-left: 50px;
+}*/
+
 table thead tr th .day.active {
   background: #c2c2c2;
   color: #5c5c5c;
@@ -162,6 +167,8 @@ table tbody tr td.hour span {
 
 .calendar {
 	background-color: #292725;
+  border-right: solid .5px white;
+
 }
 
 .userInput {
@@ -193,11 +200,11 @@ table tbody tr td.hour span {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
-
+/*
 .long {
   margin-left: 60px;
   margin-bottom: 10px;
-}
+}*/
 
 #forth {
   background-color: #292725;
@@ -209,12 +216,12 @@ table tbody tr td.hour span {
 }
 
 #indent {
-  margin-left: 50px;
+  margin-left: 250px;
 }
 
-h1.rw-sentence {
+/*h1.rw-sentence {
   text-indent: 170px;
-}
+}*/
 
 .rw-sentence{
   margin: 0;

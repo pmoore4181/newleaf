@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -5,8 +7,8 @@
     <title>New Leaf: Goal Setter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-    <link rel="icon" href="../../assets/img/leaf.png">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/goals.css" />
+    <link rel="icon" href="/assets/img/leaf.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/goals.css" />
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 </head>
@@ -26,33 +28,40 @@
         <div class="container" id="goalForm">
             <div class="box">
                 <div class="field">
-                    <label class="label" id="describe">Goal Description</label>
+                    <label class="label" id="describe" style="font-family: sans-serif;">Goal Description</label>
                     <div class="control">
                         <input class="input is-success" id="newGoal" type="text" placeholder="Read for one hour">
                     </div>
                 </div>
                 <br />
                 <div class="field">
-                    <label class="placeholder" id="setDays"><strong>What days do you want to focus on?</strong></label>
+                    <label class="placeholder" id="setDays"><strong style="font-family: sans-serif;">What days do you want to focus on?</strong></label>
                     <br />
+                    <br>
                     <label class="checkbox">
                         <input type="checkbox" name="day1" value="false" class="dayPick" id="sundaycheckbox"> Sunday
                     </label>
+                    <br />
                     <label class="checkbox">
                         <input type="checkbox" name="day2" value="false" class="dayPick" id="mondaycheckbox"> Monday
                     </label>
+                    <br />
                     <label class="checkbox">
                         <input type="checkbox" name="day3" value="false" class="dayPick" id="tuesdaycheckbox"> Tuesday
                     </label>
+                    <br />
                     <label class="checkbox">
                         <input type="checkbox" name="day4" value="false" class="dayPick" id="wednesdaycheckbox"> Wednesday
                     </label>
+                    <br />
                     <label class="checkbox">
                         <input type="checkbox" name="day5" value="false" class="dayPick" id="thursdaycheckbox"> Thursday
                     </label>
+                    <br />
                     <label class="checkbox">
                         <input type="checkbox" name="day6" value="false" class="dayPick" id="fridaycheckbox"> Friday
                     </label>
+                    <br />
                     <label class="checkbox">
                         <input type="checkbox" name="day7" value="false" class="dayPick" id="saturdaycheckbox"> Saturday
                     </label>
@@ -73,39 +82,39 @@
                     <tr>
                         <th class="calendar"></th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">20</span>
                             <span class="long" style="color: white;">Sun</span>
                             <span class="short">Sun</span>
+                            <span class="day" style="color: #00b154;">20</span>
                         </th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">21</span>
                             <span class="long" style="color: white;">Mon</span>
                             <span class="short">Mon</span>
+                            <span class="day" style="color: #00b154;">21</span>
                         </th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">22</span>
                             <span class="long" style="color: white;">Tue</span>
                             <span class="short">Tue</span>
+                            <span class="day" style="color: #00b154;">22</span>
                         </th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">23</span>
                             <span class="long" style="color: white;">Wed</span>
                             <span class="short">Wed</span>
+                            <span class="day" style="color: #00b154;">23</span>
                         </th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">24</span>
                             <span class="long" style="color: white;">Thurs</span>
                             <span class="short">Thur</span>
+                            <span class="day" style="color: #00b154;">24</span>
                         </th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">25</span>
-                            <span class="long" style="color: white;">  Fri</span>
+                            <span class="long" style="color: white;">Fri</span>
                             <span class="short">Fri</span>
+                            <span class="day" style="color: #00b154;">25</span>
                         </th>
                         <th class="calendar">
-                            <span class="day" style="color: #00b154;">26</span>
                             <span class="long" style="color: white;">Sat</span>
                             <span class="short">Sat</span>
+                            <span class="day" style="color: #00b154;">26</span>
                         </th>
                     </tr>
                 </thead>
@@ -119,7 +128,7 @@
       <tr>
         <td id='sunRow'>
           {{#if this.dataValues.sunday}}
-            {{this.goal_name}}
+            {{this.dataValues.goal_name}}
           {{/if}}
         </td>
 
@@ -208,4 +217,7 @@ function topFunction() {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
     <!-- add-goal.js -->
     <script src="../../js/add-goal.js "></script>
+    <!-- show-goal.js -->
+    <script src="../../js/show-goals.js "></script>
 </body>
+</html>

@@ -40,7 +40,7 @@ module.exports = function(app) {
         })
         .then(function(newGoal) {
             // redirect so goals show up on page as you add them
-            res.json({redirect: '/api/goals/&user_id=' + req.body.params})
+            res.redirect('/api/goals/&user_id=:' + req.params.id)
         })
 
     });
