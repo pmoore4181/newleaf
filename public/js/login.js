@@ -29,7 +29,13 @@ $(document).ready(function() {
         };
 
         console.log(newUserInfo);
-        addNewUser(newUserInfo);
+
+        if(newUserEmail.includes('@') && newUserEmail.includes('.')){
+            addNewUser(newUserInfo);
+        } else {
+            alert('Please enter a valid email address');
+        }
+
 
 
     });
@@ -83,6 +89,10 @@ $(document).ready(function() {
             success: function(data){
                 console.log(data.redirect);
                 window.location.href = usableURL + data.redirect;
+            },
+            error: function(error){
+                if(error.responseText == 'showAlert')
+                alert("Please enter correct email and password.")
             }
         });
     }

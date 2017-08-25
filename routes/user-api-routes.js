@@ -9,16 +9,22 @@ module.exports = function(app) {
         // search User db with email typed in
         db.User.findOne({
             where: {
-                email: req.query.email
+                email: req.query.email,
+                password: req.query.password
             }
         })
         .then(function(dbUser) {
+            if(dbUser){
             // return UserId and send to '/api/goals/&user_id=:id'
             var signInId = dbUser.dataValues.id;
+
             res.json({redirect: '/api/goals/&user_id=' + signInId})
+            }
+            else{
+                res.status(500).send('showAlert');
+            } 
         });
     });
-
 
     // CREATE NEW USER =========================================
 
@@ -38,7 +44,7 @@ module.exports = function(app) {
             // once on goals.html, search for goals according to user id
             db.User.findAll({
                 where: {
-                    id: newUserId
+                    id: newUserId,
                 }
             }).then(function(results) {
                 console.log(results);
